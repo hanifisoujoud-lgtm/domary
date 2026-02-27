@@ -1,0 +1,688 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 800px;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-container {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  margin: 200px auto;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input {
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background-color: #218838;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.message {
+  margin-top: 15px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* AdminPage.css */
+.admin-page {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+ min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.navbar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.navbar nav select {
+  padding: 5px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+.sidebar button {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.main-section {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+.card {
+  background: #e8f5e9;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th {
+  background: #f1f1f1;
+}
+
+.footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+
+
+/* /////////// product card :::  */
+
+
+/* Container for all cards */
+.card-product-container {
+  display: flex;
+  flex-wrap: wrap;          /* wrap to next line if too many cards */
+  gap: 20px;                /* space between cards */
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #F0F4F3;
+  justify-content: center;
+}
+
+/* Individual card */
+.cardd {
+  flex: 1 1 300px;          /* flexible width, minimum 300px */
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for card */
+.cardd:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Image at the top of card */
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Content inside the card */
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Product title */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2C7A7B;   /* greenish color for agriculture theme */
+  margin-bottom: 8px;
+}
+
+/* Product description */
+.card-description {
+  font-size: 0.9rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.buy-btn, .rent-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.buy-btn {
+  background-color: #38A169;
+}
+
+.buy-btn:hover {
+  background-color: #2F855A;
+}
+
+.rent-btn {
+  background-color: #D69E2E;
+}
+
+.rent-btn:hover {
+  background-color: #B7791F;
+}
+
+
+
+/* ////////// modal  */
+
+.modal-container {
+border-radius: 20px;
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+top: 300px;
+left: 500px;
+
+padding: 50px;
+box-shadow: 1px 1px 30px black;
+}
+
+.product-form {
+display: flex;
+flex-direction: column;
+}
+
+.product-form input {
+
+  display: block;
+  
+}
+.product-form textarea {
+  margin: 10px;
+}
+
+.product-form select {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.product-form input:focus {
+outline: none;
+box-shadow: 1px 1px 20px black;
+transform: translateY(-2px);
+border: none;
+}
+
+.product-form textarea:focus {
+  outline: none;
+box-shadow: 1px 1px 20px black;
+transform: translateY(-2px);
+border: none;
+}
+
+.btn-colse {
+  margin-left: 500px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.product-form button {
+  width: 30%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #28a745;
+  border: none;
+  border-radius: 10px;
+  transition: 1s;
+  color: white;
+  padding: 15px;
+}
+
+.product-form button:hover {
+transform: scale(1.1,1.1);
+}
+
+.add-btn {
+  background-color: #3b85d3;
+  padding: 8px 15px;
+  margin: 0px 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 400;
+
+}
+
+
+/* modal reservation ::::::: */
+
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.product-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.product-info h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 15px;
+}
+
+.reservation-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-cancel, .btn-confirm {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+}
+
+.btn-cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-confirm {
+  background: #28a745;
+  color: white;
+}
+
+.btn-buy {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.btn-rent {
+  background: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* blogs :::  */
+/* src/styles/Blog.css */
+
+/* Add this file to your component: import './styles/Blog.css'; */
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 4rem;
+}
+
+.blog-card {
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card .post-img img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .post-img img {
+    transform: scale(1.05);
+}
+
+.blog-card .card-body {
+    background: #fdfdfd;
+}
+
+.blog-card .meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.blog-card .post-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.blog-card .post-title a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.blog-card .post-title a:hover {
+    color: #0d6efd; /* Bootstrap primary color */
+}
+
+.blog-card .post-excerpt {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.readmore-btn {
+    font-weight: 500;
+}
+
+
+/* ///// modal admin ::  */
+
+/* Styles pour le Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease-in-out;
+}
+
+.btn-close-modal:hover {
+  color: #333;
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* Styles pour le Formulaire */
+.product-form .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.product-form label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.product-form textarea {
+  resize: vertical;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
